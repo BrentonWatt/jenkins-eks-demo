@@ -1,0 +1,20 @@
+multibranchPipelineJob('springboot-bbd-demo') {
+    branchSources {
+        git {
+            id('springboot-bbd-demo') // IMPORTANT: use a constant and unique identifier
+            url('https://github.com/BrentonWatt/spring-eks-test.git')
+            credentials('jenkins-github')
+            includes('*')
+        }
+    }
+    orphanedItemStrategy {
+        discardOldItems {
+        }
+    }
+
+    triggers {
+        periodic(1)
+
+    }
+
+}
