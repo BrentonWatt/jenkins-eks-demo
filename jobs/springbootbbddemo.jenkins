@@ -1,7 +1,7 @@
-multibranchPipelineJob('springboot-bbd-demo') {
+multibranchPipelineJob('springbootbbddemo') {
     branchSources {
         git {
-            id('springboot-bbd-demo') // IMPORTANT: use a constant and unique identifier
+            id('springbootbbddemo') // IMPORTANT: use a constant and unique identifier
             url('https://github.com/BrentonWatt/spring-eks-test.git')
             credentials('jenkins-github')
             includes('*')
